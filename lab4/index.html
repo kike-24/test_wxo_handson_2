@@ -486,18 +486,18 @@
 ルールと意思決定表を使用して複雑なビジネス上の意思決定を自動化することで、手作業を削減し、一貫性のある結果を提供することができます。<br />
 例えば、ローン申請者の収入やクレジット・スコアに応じてローンを承認したい場合にはルール・ベースでの意思決定を行うことが有用です。  </p>
 <h2 id="decision">Decisionの作成</h2>
-<p>Skill studioで、まず Project を作成し、そのコンポーネントの1つとして 生成AI のプロンプトを作成することができます。</p>
+<p>スキル・スタジオで、まず プロジェクト を作成し、そのコンポーネントの1つとして ビジネス・ルールを作成することができます。</p>
 <ol>
 <li>
-<p>メニュー(≣)から <strong>Skill studio</strong> を選択します。<br />
-<a class="glightbox" href="../lab4_images/image-0.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="alt text" src="../lab4_images/image-0.png" /></a> </p>
+<p>メニュー(≣)から <strong>スキル・スタジオ</strong> を選択します。<br />
+<a class="glightbox" href="lab4_images/image.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="alt text" src="lab4_images/image.png" /></a></p>
 </li>
 <li>
-<p>右上にある <strong>Create</strong> ボタンをクリック、<strong>Project</strong> をクリックします。
- <a class="glightbox" href="../lab4_images/image-1.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="alt text" src="../lab4_images/image-1.png" /></a></p>
+<p>右上にある <strong>作成</strong> ボタンをクリック、<strong>プロジェクト</strong> をクリックします。
+<a class="glightbox" href="lab4_images/image-7.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="alt text" src="lab4_images/image-7.png" /></a></p>
 </li>
 <li>
-<p>New project のウィンドウで <strong>Create project</strong> を選択し、Name の欄に <strong><em>YourInitials</em>_Lending_Services</strong> と入力して <strong>Create</strong> ボタンをクリックします。<br />
+<p>New project のウィンドウで <strong>Create project</strong> を選択し、Name の欄に <strong><em>YourInitials</em>_Lending_Service</strong> と入力して <strong>Create</strong> ボタンをクリックします。<br />
 <a class="glightbox" href="../lab4_images/image-2.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="alt text" src="../lab4_images/image-2.png" /></a></p>
 </li>
 <li>
@@ -717,32 +717,32 @@
 </tbody>
 </table>
 <ol>
+<li>左上のメニュー (≣) から<strong>スキル・スタジオ</strong>をクリックして スキル・スタジオに移動し、 <strong>スキルおよびアプリ</strong> タブ、<strong>スキル</strong> タブを順にクリックします。
+ 公開した意思決定のスキル <strong><em>YourInitials</em> Personal Loan</strong> が <strong>公開済み</strong> の状態で表示されます。右端の ⁝ から<strong>このスキルの強化</strong>を選択します。</li>
+</ol>
+<p><a class="glightbox" href="lab4_images/image-8.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="alt text" src="lab4_images/image-8.png" /></a></p>
+<ol>
 <li>
-<p>左上のメニュー (≣) から<strong>Skill studio</strong>をクリックして Skill studio に移動し、 <strong>Skills and apps</strong> タブ、<strong>Skills</strong> タブを順にクリックします。
- 公開した意思決定のスキル <strong><em>YourInitials</em> Personal Loan</strong> が <strong>Published</strong> の状態で表示されます。右端の ⁝ から<strong>Enhance this skill</strong>を選択します。
- <a class="glightbox" href="../lab4_images/image-60.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="alt text" src="../lab4_images/image-60.png" /></a></p>
+<p><strong>入力</strong> タブをクリックし、<strong>income</strong> の <strong>必須</strong> にチェックを入れてください。 
+<a class="glightbox" href="lab4_images/image-9.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="alt text" src="lab4_images/image-9.png" /></a></p>
 </li>
 <li>
-<p><strong>Input</strong> タブをクリックし、<strong>income</strong> の <strong>Required</strong> にチェックを入れてください。 
- <a class="glightbox" href="../lab4_images/image-61.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="alt text" src="../lab4_images/image-61.png" /></a></p>
-</li>
-<li>
-<p><strong>loanPurpose</strong> で選択肢を表示するようにします。<strong>loanPurpose</strong> の <strong>Edit response</strong> をクリックして <strong>Options</strong> を選択します。次の3つのOptionを設定してください。</p>
-</li>
+<p><strong>loanPurpose</strong> で選択肢を表示するようにします。<strong>loanPurpose</strong> の <strong>応答の編集</strong> をクリックして <strong>オプション</strong> を選択します。次の3つのOptionを設定してください。</p>
+<ul>
 <li><strong>medical emergency</strong></li>
 <li><strong>consolidate debt</strong></li>
-<li>
-<p><strong>home improvement</strong>
- <a class="glightbox" href="../lab4_images/image-62.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="alt text" src="../lab4_images/image-62.png" /></a></p>
+<li><strong>home improvement</strong>
+<a class="glightbox" href="lab4_images/image-14.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="alt text" src="lab4_images/image-14.png" /></a></li>
+</ul>
 </li>
 <li>
 <p><strong>creditScore</strong> の表示ラベルを <strong>Provide the Experian credit score</strong> に変更します。
- そのために、<strong>Provide the Label for input parameter creditScore</strong> と書かれいてる箇所に <strong>Provide the Experian credit score</strong> を入力してください。<br />
-<a class="glightbox" href="../lab4_images/image-63.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="alt text" src="../lab4_images/image-63.png" /></a></p>
+ そのために、<strong>入力パラメータ「CreditScore」にラベルを指定します。</strong> と書かれいてる箇所に <strong>Provide the Experian credit score</strong> を入力してください。<br />
+<a class="glightbox" href="lab4_images/image-15.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="alt text" src="lab4_images/image-15.png" /></a></p>
 </li>
 <li>
-<p><strong>Publish</strong>をクリックして変更を保存します。<br />
-<a class="glightbox" href="../lab4_images/image-64.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="alt text" src="../lab4_images/image-64.png" /></a></p>
+<p><strong>発行</strong>をクリックして変更を保存します。<br />
+<a class="glightbox" href="lab4_images/image-16.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="alt text" src="lab4_images/image-16.png" /></a></p>
 </li>
 </ol>
 <h2 id="openapi">(オプション) OpenAPI定義を直接編集し、細かな変更を行う</h2>
@@ -767,9 +767,9 @@
 </table>
 <ol>
 <li>
-<p><strong>Skill studio</strong> に移動し、 <strong>Skills and apps</strong> タブ、<strong>Skills</strong> タブを順にクリックします。
- <strong><em>YourInitials</em> Personal Loan</strong>の右端の ⁝ から <strong>Export this skill</strong> を選択し、スキルをエクスポートし、ローカルにjsonファイルを保存します。 
- <a class="glightbox" href="../lab4_images/image-70.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="alt text" src="../lab4_images/image-70.png" /></a></p>
+<p><strong>スキル・スタジオ</strong> に移動し、 <strong>スキルおよびアプリ</strong> タブ、<strong>スキル</strong> タブを順にクリックします。
+ <strong><em>YourInitials</em> Personal Loan</strong>の右端の ⁝ から <strong>このスキルをエクスポート</strong> を選択し、スキルをエクスポートし、ローカルにjsonファイルを保存します。 
+ <a class="glightbox" href="lab4_images/image-17.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="alt text" src="lab4_images/image-17.png" /></a></p>
 </li>
 <li>
 <p>メモ帳やエディタなどで保存したファイルを開きます。(実際のファイルは改行が含まれません、必要に応じてお使いのエディタでフォーマットしてください。)  各項目はx-ibmプロパティによって設定されます。x-ibmプロパティの詳細については
@@ -777,12 +777,12 @@
  を参照してください。</p>
 </li>
 <li>
-<p><strong>employed</strong> は以下の様に設定されています。<strong>,"default": "true"</strong>となるようにファイルを編集してください。（カンマを含めることを忘れないでください） 
+<p><strong>employed</strong> は以下の様に設定されています。<strong>,"default": true</strong>となるようにファイルを編集してください。（カンマを含めることを忘れないでください） 
  <div class="highlight"><pre><span></span><code>   &quot;employed&quot;: {
                &quot;type&quot;: &quot;boolean&quot;,
                &quot;x-ibm-order&quot;: 3,
                &quot;x-ibm-multiline&quot;: &quot;false&quot;,
-               &quot;default&quot;: &quot;true&quot;
+               &quot;default&quot;: true
                },
 </code></pre></div></p>
 </li>
@@ -800,47 +800,46 @@
 <p>ファイルを保存します。 </p>
 </li>
 <li>
-<p><strong>Skill studio</strong> の右上にある <strong>Create</strong> ボタンをクリック、<strong>Import API</strong> をクリックします。<br />
-<a class="glightbox" href="../lab4_images/image-71.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="alt text" src="../lab4_images/image-71.png" /></a></p>
+<p><strong>スキル・スタジオ</strong> の右上にある <strong>作成</strong> ボタンをクリック、<strong>APIのインポート</strong> をクリックします。<br />
+<a class="glightbox" href="lab4_images/image-18.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="alt text" src="lab4_images/image-18.png" /></a></p>
 </li>
 <li>
-<p><strong>From a file</strong>をクリックし、先ほど保存したファイルをドラッグ＆ドロップするか、クリックして選択してください。<br />
-<a class="glightbox" href="../lab4_images/image-72.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="alt text" src="../lab4_images/image-72.png" /></a></p>
+<p><strong>ファイルから</strong>をクリックし、先ほど保存したファイルをドラッグ＆ドロップするか、クリックして選択してください。<br />
+<a class="glightbox" href="lab4_images/image-27.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="alt text" src="lab4_images/image-27.png" /></a></p>
 </li>
 <li>
-<p>ファイルの検証が正しく行われたことを確認し<strong>Next</strong>をクリックします。エラーが表示された場合には、正しく編集されていることを確認してください。<br />
-<a class="glightbox" href="../lab4_images/image-73.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="alt text" src="../lab4_images/image-73.png" /></a></p>
+<p>ファイルの検証が正しく行われたことを確認し<strong>次へ</strong>をクリックします。エラーが表示された場合には、正しく編集されていることを確認してください。<br />
+<a class="glightbox" href="lab4_images/image-28.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="alt text" src="lab4_images/image-28.png" /></a></p>
 </li>
 <li>
-<p>既に存在するスキルをインポートするため、警告が表示されますが、スキルのチェックボックスにチェックをいれ、<strong>Add</strong>をクリックしてスキルを上書きします。<br />
-<a class="glightbox" href="../lab4_images/image-74.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="alt text" src="../lab4_images/image-74.png" /></a></p>
+<p>既に存在するスキルをインポートするため、警告が表示されますが、スキルのチェックボックスにチェックをいれ、<strong>追加</strong>をクリックしてスキルを上書きします。<br />
+<a class="glightbox" href="lab4_images/image-29.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="alt text" src="lab4_images/image-29.png" /></a></p>
 </li>
 <li>
-<p>スキルの右側のメニューから <strong>Enhance this skill</strong> をクリックし、<strong>Publish</strong>してください。<strong>Status</strong> が <strong>Ready to publish</strong> から <strong>Published</strong>に変わります。
- <a class="glightbox" href="../lab4_images/image-75.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="alt text" src="../lab4_images/image-75.png" /></a></p>
+<p>スキルの右側のメニューから <strong>このスキルの強化</strong> をクリックし、<strong>発行</strong>してください。<strong>状況</strong> が <strong>公開の準備が完了しました</strong> から <strong>公開済</strong>に変わります。
+<a class="glightbox" href="lab4_images/image-33.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="alt text" src="lab4_images/image-33.png" /></a></p>
 </li>
 </ol>
 <h2 id="_5">作成したローン審査のスキルを使用してみよう！</h2>
-<p>スキルの実行を通じて、エンハンス時に変更した内容が正しく行われていることを確認します。</p>
+<p>スキルの実行を通じて、強化時に変更した内容が正しく行われていることを確認します。</p>
 <ol>
 <li>
-<p><strong>Skill catalog</strong> に移動し、検索欄に <strong>Lending</strong> と入力して検索します。表示された <strong><em>YourInitials</em>_Lending_Services</strong> をクリックします。
- <a class="glightbox" href="../lab4_images/image-48.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="alt text" src="../lab4_images/image-48.png" /></a></p>
+<p><strong>スキル・カタログ</strong> に移動し、検索欄に <strong>Lending</strong> と入力して検索します。表示された <strong><em>YourInitials</em>_Lending_Services</strong> をクリックします。</p>
 </li>
 <li>
-<p><strong><em>YourInitials</em> Personal Loan</strong> の <strong>Add</strong> をクリックしてスキルを追加します。
- <a class="glightbox" href="../lab4_images/image-81.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="alt text" src="../lab4_images/image-81.png" /></a></p>
+<p><strong><em>YourInitials</em> Personal Loan</strong> の <strong>追加</strong> をクリックしてスキルを追加します。
+<a class="glightbox" href="lab4_images/image-34.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="alt text" src="lab4_images/image-34.png" /></a></p>
 </li>
 <li>
-<p><strong>Chat</strong> に移動し、チャットの入力欄に、<strong><em>YourInitials</em> Personal Loan</strong> と入力してみてください。 スキルのフォームが表示され、必須項目として設定した <strong>income</strong> のみが表示されていることが確認できます。試しに、<strong>500</strong> を入力しておきましょう。
- <a class="glightbox" href="../lab4_images/image-82.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="alt text" src="../lab4_images/image-82.png" /></a>
- <strong>Show all fields</strong> をクリックして、他の項目に関する変更についても確認してください。</p>
+<p><strong>チャット</strong> に移動し、チャットの入力欄に、<strong><em>YourInitials</em> Personal Loan</strong> と入力してみてください。 スキルのフォームが表示され、必須項目として設定した <strong>income</strong> のみが表示されていることが確認できます。試しに、<strong>500</strong> を入力しておきましょう。
+<a class="glightbox" href="lab4_images/image-35.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="alt text" src="lab4_images/image-35.png" /></a>
+ <strong>全フィールドの表示</strong> をクリックして、他の項目に関する変更についても確認してください。</p>
 <ul>
 <li><strong>loanPurpose</strong> をクリックすると選択肢が表示される。</li>
 <li>表示ラベルが <strong>Provide the Experian credit score</strong> になっている。</li>
 <li>(オプション) <strong>SSN</strong> が表示されていない。</li>
 <li>(オプション) <strong>enployed</strong> にデフォルトでチェックが入っている。
- <a class="glightbox" href="../lab4_images/image-83.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="alt text" src="../lab4_images/image-83.png" /></a></li>
+ <a class="glightbox" href="lab4_images/image-36.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="alt text" src="lab4_images/image-36.png" /></a></li>
 </ul>
 </li>
 <li>
