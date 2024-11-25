@@ -5,11 +5,11 @@ watsonx Orchestrate では、生成AIをカスタムスキルとして外部か�
 ## 生成AIを作成してみよう
 Skill studioで、まず Project を作成し、そのコンポーネントの1つとして 生成AI のプロンプトを作成することができます。
 
- 1. メニュー(≣)から **Skill studio** を選択します。  
- ![alt text](lab2_GenAI_images/image-0.png) 
+ 1. メニュー(≣)から **スキル・スタジオ** を選択します。  
+  ![alt text](lab2_GenAI_images/lab2-1.png)
 
- 2. 右上にある **Create** ボタンをクリック、**Project** をクリックします。
- ![alt text](lab2_GenAI_images/image-1.png)
+ 2. 右上にある **作成** ボタンをクリックし、**プロジェクト** をクリックします。
+ ![alt text](lab2_GenAI_images/lab2-2.png)
 
  3. New project のウィンドウで **Create project** を選択し、Name の欄に ***YourInitials*_recommendation** と入力して **Create** をクリックします。  
  ![alt text](lab2_GenAI_images/image-2.png)
@@ -159,17 +159,17 @@ Skill studioで、まず Project を作成し、そのコンポーネントの1�
  10. 正常に公開されると、以下のように **Published** と表示されます。
  ![alt text](lab2_GenAI_images/image-59.png)
 
- 11. 左上のメニュー (≣) から**Skill studio**をクリックして Skill studio に移動し、 **Skills and apps** タブ、**Skills** タブを順にクリックします。
- 公開した生成AIのスキルが **Published** の状態で表示されます。右端の ⁝ から**Enhance this skill**を選択します。
- ![alt text](lab2_GenAI_images/image-60.png)
+ 11. 左上のメニュー (≣) から**スキル・スタジオ**をクリックして Skill studio に移動し、 **スキルおよびアプリ** タブ、**スキル** タブを順にクリックします。
+ 公開した生成AIのスキルが **公開済み** の状態で表示されます。右端の ⁝ から**このスキルの強化**を選択します。
+ ![alt text](lab2_GenAI_images/lab2-3.png)
 
- 12. 複数のタブがある画面が表示されます。左端の**Name**タブはスキルの名前を表しています。
- ![alt text](lab2_GenAI_images/image-61.png)
+ 12. 複数のタブがある画面が表示されます。左端の**名前**タブはスキルの名前を表しています。
+ ![alt text](lab2_GenAI_images/lab2-4.png)
  
- 13. **Input**タブをクリックします。この画面は、インポートしたスキルを実行する際の入力項目を表しています。  表示項目を日本語にしてみましょう。
- ![alt text](lab2_GenAI_images/image-62.png)
+ 13. **入力**タブをクリックします。この画面は、インポートしたスキルを実行する際の入力項目を表しています。  入力項目を画像の順に変更し、表示するラベルを日本語にしてみましょう。
+ ![alt text](lab2_GenAI_images/lab2-5.png)
 
- 14. **Phrases**タブは、チャットからスキルを呼び出すためのフレーズを入力します。多くのフレーズを入力するほど、自然言語からスキルを判断する精度が向上します。日本語で例文を次の３つの文を追加します。
+ 14. **句**タブは、チャットからスキルを呼び出すためのフレーズを入力します。多くのフレーズを入力するほど、自然言語からスキルを判断する精度が向上します。日本語で例文を次の３つの文を追加します。
 
     - `観光地のお勧め文を作成して`
     - `おすすめ観光スポット`
@@ -177,58 +177,58 @@ Skill studioで、まず Project を作成し、そのコンポーネントの1�
 
     **Enter(return)** を押すと次の入力域が表示されます。 
 
-    ![alt text](lab2_GenAI_images/image-63.png)
+    ![alt text](lab2_GenAI_images/lab2-6.png)
     
     また、**Auto-generate phrases** をクリックすると、生成AIが自動でフレーズを生成してくれます。  
 
  15. 他のタブも同様に動作を確認できます。
-    - **Output**タブは、スキルの出力を設定できます。スキルの実行結果を表やテキストの形式で出力することができます。
-    - **Next Best Skill**タブは、このスキルが使用された後に、次に行うべきスキルとして watsonx Orchestrate が提案するスキルを設定できます。 
+    - **出力**タブは、スキルの出力を設定できます。スキルの実行結果を表やテキストの形式で出力することができます。
+    - **次善のスキル**タブは、このスキルが使用された後に、次に行うべきスキルとして watsonx Orchestrate が提案するスキルを設定できます。 
 
- 16. 最後に右下の**Publish**を押します。
+ 16. 最後に右下の**発行**を押します。
 
- 17. スキルが公開（publish）できたというメッセージが表示されます。
+ 17. スキルが公開できたというメッセージが表示されます。
  
- ![alt text](lab2_GenAI_images/image-64.png)
+ ![alt text](lab2_GenAI_images/lab2-7.png)
  
 
 ## 観光地のお勧めメールを生成して、スキルをテストしてみよう   
 
   このセクションでは、作成したスキルをテストする方法について説明します。 スキルをテストするには、カタログからスキルを追加して実行する必要があります。 このための手順は、以下のとおりです。
 
- 1. 左上にあるメニュー (≣) をクリックし、**Chat**を選択して、チャット画面に移動します。
+ 1. 左上にあるメニュー (≣) をクリックし、**チャット**を選択して、チャット画面に移動します。
 
- 2. **Add skills from the catalog** を選択し、前のステップで作成したスキルを選択します。  
-  ![alt text](lab2_GenAI_images/image-70.png)
+ 2. **スキルをカタログから追加** を選択し、前のステップで作成したスキルを選択します。  
+  ![alt text](lab2_GenAI_images/lab2-8.png)
 
- 3. 検索バーで、`recommendation` を検索します。先ほど作成した***YourInitials*-Recommendation** というAppsを開きます。
-  ![alt text](lab2_GenAI_images/image-71.png)
+ 3. 検索バーで、`recommendation` を検索します。先ほど作成した***YourInitials*-Recommendation** というアプリを開きます。
+  ![alt text](lab2_GenAI_images/lab2-9.png)
 
- 4. スキルを追加するためには、**Add skill+**をクリックします。
-  ![alt text](lab2_GenAI_images/image-72.png)
+ 4. スキルを追加するためには、**スキルの追加 +**をクリックします。
+  ![alt text](lab2_GenAI_images/lab2-10.png)
 
- 5. スキルが追加された (`Added`) というメッセージが表示されます。  
-  ![alt text](lab2_GenAI_images/image-73.png)
+ 5. スキルが追加された (`追加✓`) というメッセージが表示されます。  
+  ![alt text](lab2_GenAI_images/lab2-11.png)
 
- 6. **Chat** 画面に戻ります。追加したスキルが表示されています。
-  ![alt text](lab2_GenAI_images/image-74.png)
+ 6. **チャット** 画面に戻ります。追加したスキルが表示されています。
+  ![alt text](lab2_GenAI_images/lab2-12.png)
 
  7. スキルをテストするには、先ほどフレーズとして登録した **おすすめ観光地** をチャット欄に入力します。（該当のスキルをクリックしても実行できます）  
   ![alt text](lab2_GenAI_images/image-75.png)
 
  11. トピック の欄に`観光地`、年齢層の欄に`20`、趣味の欄に`写真撮影`を入力します。
- 入力が完了したら、**Apply** をクリックします。  
-  ![alt text](lab2_GenAI_images/image-76.png)
+ 入力が完了したら、**適用** をクリックします。  
+  ![alt text](lab2_GenAI_images/lab2-13.png)
 
- 12. スキルが実行されると、進行状況が表示され、`working on it` というメッセージが表示されます。 最後に、観光地のお勧めメールのコンテンツが生成されます。  
-  ![alt text](lab2_GenAI_images/image-77.png)
+ 12. スキルが実行されると、進行状況が表示され、`作業しています…` というメッセージが表示されます。 最後に、観光地のお勧めメールのコンテンツが生成されます。  
+  ![alt text](lab2_GenAI_images/lab2-14.png)
 
  13. 以上で、メールのコンテンツを生成するテストは完了です。
 
 
 
 ## お疲れさまでした！
-このLabでは、Skill studioのProjectで生成AIのプロンプトを作成しました。
+このLabでは、スキル・スタジオのプロジェクトで生成AIのプロンプトを作成しました。
 Context や Prompt input を記入したり、変数を設定したりして、出力を生成しました。
 また、トークンや Training examples の調整を行うことで、出力の精度を向上させることができました。
 

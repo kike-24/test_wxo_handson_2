@@ -5,15 +5,15 @@
 例えば、ローン申請者の収入やクレジット・スコアに応じてローンを承認したい場合にはルール・ベースでの意思決定を行うことが有用です。  
 
 ## Decisionの作成
-Skill studioで、まず Project を作成し、そのコンポーネントの1つとして 生成AI のプロンプトを作成することができます。
+スキル・スタジオで、まず プロジェクト を作成し、そのコンポーネントの1つとして ビジネス・ルールを作成することができます。
 
- 1. メニュー(≣)から **Skill studio** を選択します。  
- ![alt text](lab4_images/image-0.png) 
+ 1. メニュー(≣)から **スキル・スタジオ** を選択します。  
+ ![alt text](lab4_images/image.png)
 
- 2. 右上にある **Create** ボタンをクリック、**Project** をクリックします。
- ![alt text](lab4_images/image-1.png)
+ 2. 右上にある **作成** ボタンをクリック、**プロジェクト** をクリックします。
+![alt text](lab4_images/image-7.png)
 
- 3. New project のウィンドウで **Create project** を選択し、Name の欄に ***YourInitials*_Lending_Services** と入力して **Create** ボタンをクリックします。  
+ 3. New project のウィンドウで **Create project** を選択し、Name の欄に ***YourInitials*_Lending_Service** と入力して **Create** ボタンをクリックします。  
  ![alt text](lab4_images/image-2.png)
 
  4. **Decision** (意思決定の自動化)を選択します。
@@ -153,25 +153,27 @@ Skill studioで、まず Project を作成し、そのコンポーネントの1�
 |loan purpose|選択肢の設定        |
 |credit score|表示ラベルの変更     |
  
- 1. 左上のメニュー (≣) から**Skill studio**をクリックして Skill studio に移動し、 **Skills and apps** タブ、**Skills** タブを順にクリックします。
- 公開した意思決定のスキル ***YourInitials* Personal Loan** が **Published** の状態で表示されます。右端の ⁝ から**Enhance this skill**を選択します。
- ![alt text](lab4_images/image-60.png)
+ 1. 左上のメニュー (≣) から**スキル・スタジオ**をクリックして スキル・スタジオに移動し、 **スキルおよびアプリ** タブ、**スキル** タブを順にクリックします。
+ 公開した意思決定のスキル ***YourInitials* Personal Loan** が **公開済み** の状態で表示されます。右端の ⁝ から**このスキルの強化**を選択します。
 
- 2. **Input** タブをクリックし、**income** の **Required** にチェックを入れてください。 
- ![alt text](lab4_images/image-61.png)
- 
- 3. **loanPurpose** で選択肢を表示するようにします。**loanPurpose** の **Edit response** をクリックして **Options** を選択します。次の3つのOptionを設定してください。
-   - **medical emergency**
-   - **consolidate debt**
-   - **home improvement**
- ![alt text](lab4_images/image-62.png)
+![alt text](lab4_images/image-8.png)
+
+ 2. **入力** タブをクリックし、**income** の **必須** にチェックを入れてください。 
+![alt text](lab4_images/image-9.png)
+
+ 3. **loanPurpose** で選択肢を表示するようにします。**loanPurpose** の **応答の編集** をクリックして **オプション** を選択します。次の3つのOptionを設定してください。
+
+    - **medical emergency**
+    - **consolidate debt**
+    - **home improvement**
+![alt text](lab4_images/image-14.png)
  
  4. **creditScore** の表示ラベルを **Provide the Experian credit score** に変更します。
- そのために、**Provide the Label for input parameter creditScore** と書かれいてる箇所に **Provide the Experian credit score** を入力してください。  
- ![alt text](lab4_images/image-63.png)
+ そのために、**入力パラメータ「CreditScore」にラベルを指定します。** と書かれいてる箇所に **Provide the Experian credit score** を入力してください。  
+![alt text](lab4_images/image-15.png)
  
- 5. **Publish**をクリックして変更を保存します。  
- ![alt text](lab4_images/image-64.png)
+ 5. **発行**をクリックして変更を保存します。  
+![alt text](lab4_images/image-16.png)
 
 ## (オプション) OpenAPI定義を直接編集し、細かな変更を行う
 スキルが定義されているOpenAPI定義を直接変更することでより細かい変更が可能です。 
@@ -181,21 +183,21 @@ Skill studioで、まず Project を作成し、そのコンポーネントの1�
 |SSN         |非表示             |
 |employed    |default value:true|
 
- 1. **Skill studio** に移動し、 **Skills and apps** タブ、**Skills** タブを順にクリックします。
- ***YourInitials* Personal Loan**の右端の ⁝ から **Export this skill** を選択し、スキルをエクスポートし、ローカルにjsonファイルを保存します。 
- ![alt text](lab4_images/image-70.png)
+ 1. **スキル・スタジオ** に移動し、 **スキルおよびアプリ** タブ、**スキル** タブを順にクリックします。
+ ***YourInitials* Personal Loan**の右端の ⁝ から **このスキルをエクスポート** を選択し、スキルをエクスポートし、ローカルにjsonファイルを保存します。 
+ ![alt text](lab4_images/image-17.png)
  
  2. メモ帳やエディタなどで保存したファイルを開きます。(実際のファイルは改行が含まれません、必要に応じてお使いのエディタでフォーマットしてください。)  各項目はx-ibmプロパティによって設定されます。x-ibmプロパティの詳細については
  <a href="https://www.ibm.com/docs/ja/watsonx/watson-orchestrate/current?topic=skills-understanding-x-properties" target="_blank" rel="noopener noreferrer">x-ibm プロパティーについて</a>
  を参照してください。
  
- 3. **employed** は以下の様に設定されています。**,"default": "true"**となるようにファイルを編集してください。（カンマを含めることを忘れないでください） 
+ 3. **employed** は以下の様に設定されています。**,"default": true**となるようにファイルを編集してください。（カンマを含めることを忘れないでください） 
  ```
     "employed": {
                 "type": "boolean",
                 "x-ibm-order": 3,
                 "x-ibm-multiline": "false",
-                "default": "true"
+                "default": true
                 },
  ```
  4. 同様にSSNの部分を修正し、以下の様に **,"x-ibm-show": "false"**を追加してください。
@@ -210,38 +212,37 @@ Skill studioで、まず Project を作成し、そのコンポーネントの1�
  
  5. ファイルを保存します。 
  
- 6. **Skill studio** の右上にある **Create** ボタンをクリック、**Import API** をクリックします。  
- ![alt text](lab4_images/image-71.png)
+ 6. **スキル・スタジオ** の右上にある **作成** ボタンをクリック、**APIのインポート** をクリックします。  
+ ![alt text](lab4_images/image-18.png)
  
- 7. **From a file**をクリックし、先ほど保存したファイルをドラッグ＆ドロップするか、クリックして選択してください。  
- ![alt text](lab4_images/image-72.png)
+ 7. **ファイルから**をクリックし、先ほど保存したファイルをドラッグ＆ドロップするか、クリックして選択してください。  
+![alt text](lab4_images/image-27.png)
  
- 8. ファイルの検証が正しく行われたことを確認し**Next**をクリックします。エラーが表示された場合には、正しく編集されていることを確認してください。  
- ![alt text](lab4_images/image-73.png)
+ 8. ファイルの検証が正しく行われたことを確認し**次へ**をクリックします。エラーが表示された場合には、正しく編集されていることを確認してください。  
+ ![alt text](lab4_images/image-28.png)
  
- 9. 既に存在するスキルをインポートするため、警告が表示されますが、スキルのチェックボックスにチェックをいれ、**Add**をクリックしてスキルを上書きします。  
- ![alt text](lab4_images/image-74.png)
+ 9. 既に存在するスキルをインポートするため、警告が表示されますが、スキルのチェックボックスにチェックをいれ、**追加**をクリックしてスキルを上書きします。  
+![alt text](lab4_images/image-29.png)
  
- 10. スキルの右側のメニューから **Enhance this skill** をクリックし、**Publish**してください。**Status** が **Ready to publish** から **Published**に変わります。
- ![alt text](lab4_images/image-75.png)
+ 10. スキルの右側のメニューから **このスキルの強化** をクリックし、**発行**してください。**状況** が **公開の準備が完了しました** から **公開済**に変わります。
+![alt text](lab4_images/image-33.png)
 
 ## 作成したローン審査のスキルを使用してみよう！
-スキルの実行を通じて、エンハンス時に変更した内容が正しく行われていることを確認します。
+スキルの実行を通じて、強化時に変更した内容が正しく行われていることを確認します。
 
- 1. **Skill catalog** に移動し、検索欄に **Lending** と入力して検索します。表示された ***YourInitials*_Lending_Services** をクリックします。
- ![alt text](lab4_images/image-48.png)
+ 1. **スキル・カタログ** に移動し、検索欄に **Lending** と入力して検索します。表示された ***YourInitials*_Lending_Services** をクリックします。
  
- 2. ***YourInitials* Personal Loan** の **Add** をクリックしてスキルを追加します。
- ![alt text](lab4_images/image-81.png)
+ 2. ***YourInitials* Personal Loan** の **追加** をクリックしてスキルを追加します。
+![alt text](lab4_images/image-34.png)
  
- 3. **Chat** に移動し、チャットの入力欄に、***YourInitials* Personal Loan** と入力してみてください。 スキルのフォームが表示され、必須項目として設定した **income** のみが表示されていることが確認できます。試しに、**500** を入力しておきましょう。
- ![alt text](lab4_images/image-82.png)
- **Show all fields** をクリックして、他の項目に関する変更についても確認してください。
+ 3. **チャット** に移動し、チャットの入力欄に、***YourInitials* Personal Loan** と入力してみてください。 スキルのフォームが表示され、必須項目として設定した **income** のみが表示されていることが確認できます。試しに、**500** を入力しておきましょう。
+![alt text](lab4_images/image-35.png)
+ **全フィールドの表示** をクリックして、他の項目に関する変更についても確認してください。
      - **loanPurpose** をクリックすると選択肢が表示される。
      - 表示ラベルが **Provide the Experian credit score** になっている。
      - (オプション) **SSN** が表示されていない。
      - (オプション) **enployed** にデフォルトでチェックが入っている。
- ![alt text](lab4_images/image-83.png)
+ ![alt text](lab4_images/image-36.png)
  
  4. 値を入力し、正しい結果が返ってくることを確認してください。
  
