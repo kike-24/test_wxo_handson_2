@@ -188,9 +188,9 @@ paths:
 ![alt text](lab1_images/lab1-27.png)
 
 2. 先ほど追加したスキルが呼び出され、入力フォームが表示されます。  
-![alt text](lab1_images/lab1-28.png)
+![alt text](lab1_images/lab1-28.png)  
 
-3. 自分の名前を入力し、**適用**ボタンをクリックしてください。 
+3. 自分の名前を入力し、**適用**ボタンをクリックしてください。  
 ![alt text](lab1_images/lab1-29.png)
 
 

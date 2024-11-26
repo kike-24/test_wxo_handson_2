@@ -144,7 +144,7 @@
  ![alt text](lab4_images/image-51.png)
 
   
-## スキルのエンハンス
+## スキルのエンハンス (強化)
 スキルのエンハンスを行い、各入力パラメータの表示形式や振る舞いを次の様に変更します。
 
 |入力パラメータ|振る舞い            |
@@ -236,7 +236,7 @@
 ![alt text](lab4_images/image-34.png)
  
  3. **チャット** に移動し、チャットの入力欄に、***YourInitials* Personal Loan** と入力してみてください。 スキルのフォームが表示され、必須項目として設定した **income** のみが表示されていることが確認できます。試しに、**500** を入力しておきましょう。
-![alt text](lab4_images/image-35.png)
+![alt text](lab4_images/image-35.png)  
  **全フィールドの表示** をクリックして、他の項目に関する変更についても確認してください。
      - **loanPurpose** をクリックすると選択肢が表示される。
      - 表示ラベルが **Provide the Experian credit score** になっている。
