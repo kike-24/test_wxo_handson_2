@@ -83,7 +83,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#lab5-ai-assistant-builder" class="md-skip">
+        <a href="#lab5-air" class="md-skip">
           Skip to content
         </a>
       
@@ -349,9 +349,9 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#ai-assistant" class="md-nav__link">
+  <a href="#ai" class="md-nav__link">
     <span class="md-ellipsis">
-      AI Assistantの作成
+      AIアシスタントの作成
     </span>
   </a>
   
@@ -436,21 +436,21 @@
                   
 
 
-<h1 id="lab5-ai-assistant-builder">Lab5 AI Assistant Builder</h1>
-<p>このLabでは、AI Assistant Builderを用いて、AI Assistantを構築します。生成AIを用いて回答するアクションや、これまでのハンズオンで作成したスキルを呼び出すアクションを定義し、動作を確認します</p>
-<h2 id="ai-assistant">AI Assistantの作成</h2>
+<h1 id="lab5-air">Lab5 AIアシスタント・ビルダーr</h1>
+<p>このLabでは、AIアシスタント・ビルダーを用いて、AI アシスタントを構築します。生成AIを用いて回答するアクションや、これまでのハンズオンで作成したスキルを呼び出すアクションを定義し、動作を確認します。</p>
+<h2 id="ai">AIアシスタントの作成</h2>
 <ol>
 <li>
-<p>watsonx Orchestrateにログインし、<strong>AI Assistant Builder</strong>をクリックします。もしくは、左上のメニューから<strong>AI Assistant Builder</strong>を選択してください。<br />
-<a class="glightbox" href="../lab5_images/image-0.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="alt text" src="../lab5_images/image-0.png" /></a></p>
+<p>watsonx Orchestrateにログインし、<strong>AIアシスタント・ビルダー</strong>をクリックします。もしくは、左上のメニューから<strong>AIアシスタント・ビルダー</strong>を選択してください。<br />
+<a class="glightbox" href="../lab5_AIAssistant_images/image.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="alt text" src="../lab5_AIAssistant_images/image.png" /></a></p>
 </li>
 <li>
 <p>画面上部にAssistantのリストがあります。そこを展開し、<strong>Create New ＋</strong>をクリックします。<br />
-<a class="glightbox" href="../lab5_images/image-1.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="alt text" src="../lab5_images/image-1.png" /></a></p>
+<a class="glightbox" href="../lab5_AIAssistant_images/image-1.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="alt text" src="../lab5_AIAssistant_images/image-1.png" /></a></p>
 </li>
 <li>
-<p>Assistantの作成ダイアログが表示されるので、<strong><em>YourInitials</em>-Assistant</strong>という名前を入力し、<strong>Create assistant</strong>をクリックしてください。Assistant Languageとして日本語を選択することも可能ですが、現時点で一部の機能が使用できないため<strong>English</strong>のままにしてください。<br />
-<a class="glightbox" href="../lab5_images/image-2.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="alt text" src="../lab5_images/image-2.png" /></a></p>
+<p>Assistantの作成ダイアログが表示されるので、<strong><em>YourInitials</em>-Assistant</strong>という名前を入力し、<strong>Create assistant</strong>をクリックしてください。Assistant Languageとして日本語を選択することも可能ですが、現時点で一部の機能が使用できないため今回は<strong>English</strong>のままハンズオンを行います。
+ <a class="glightbox" href="../lab5_images/image-2.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="alt text" src="../lab5_images/image-2.png" /></a></p>
 </li>
 <li>
 <p>Assistantが作成されます。画面下部に全体のアーキテクチャが表示されています。このハンズオンでは、<strong>General purpose</strong>、<strong>AI-guided</strong>、<strong>Skill-based</strong>の3つの動作を確認します。    <br />
@@ -461,35 +461,44 @@
 <p>AI AssistantではLLMを用いて回答を生成することが可能です。また、LLMによる回答を望まない場合には、LLMによる一般的な回答を行わないように設定することが可能です。Elastic Searchとの統合を構成することで、検索結果をもとに生成AIで回答を生成するいわゆるRAG(Retrieval Augumented Generation)のパターンを構成することも可能ですが、今回のハンズオンでは行いません。</p>
 <ol>
 <li>
-<p>左側のリストより、<strong>Generative AI</strong> を選択してください。<br />
+<p>左側のリストより、<strong>Generative AI</strong> を選択してください。 <br />
 <a class="glightbox" href="../lab5_images/image-4.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="alt text" src="../lab5_images/image-4.png" /></a></p>
 </li>
 <li>
 <p>以下のような画面が表示されます。この画面からは生成AIに関する設定を行うことが可能です。上部選択リストを展開し、利用可能なLLMを確認してください。今回はデフォルトで設定されている、graniteをそのまま使用します。<br />
-<a class="glightbox" href="../lab5_images/image-5.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="alt text" src="../lab5_images/image-5.png" /></a></p>
+<a class="glightbox" href="../lab5_AIAssistant_images/image-2.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="alt text" src="../lab5_AIAssistant_images/image-2.png" /></a></p>
 </li>
 <li>
-<p>右下に表示されているプレビューの入力欄に<strong>What is IBM?</strong>と入力して送信してください。LLMによって一般的な質問に対しての回答が生成されます。　　<br />
-<a class="glightbox" href="../lab5_images/image-6.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="alt text" src="../lab5_images/image-6.png" /></a></p>
+<p>右下に表示されているプレビューの入力欄に<strong>IBMについて教えて</strong>と入力して送信してください。LLMによって一般的な質問に対しての回答が生成されます。場合によっては英語で返答
+ されてしまうこともあります。その場合には、次の手順で指示を与えます。<br />
+<a class="glightbox" href="../lab5_AIAssistant_images/image-3.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="alt text" src="../lab5_AIAssistant_images/image-3.png" /></a></p>
 </li>
 <li>
-<p>LLMが一般的な回答を行うかどうかは、<strong>Answer behavior</strong> の <strong>General-purpose answering</strong> で設定することが可能です。右側にあるトグルスイッチをクリックし、OFFにしてください。
- <a class="glightbox" href="../lab5_images/image-7.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="alt text" src="../lab5_images/image-7.png" /></a></p>
+<p>Add instructionsボタンをクリックし、追加の支持を与えます。入力欄が表示されるので<strong>日本語で回答してください</strong>と入力します。<br />
+<a class="glightbox" href="../lab5_AIAssistant_images/image-6.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="alt text" src="../lab5_AIAssistant_images/image-6.png" /></a></p>
 </li>
 <li>
-<p>再びプレビューの入力欄に<strong>What is IBM?</strong>と入力してください。先ほどとは回答が異なることを確認します。<br />
+<p>チャットのプレビューの右上にあるRestart Conversationアイコンをクリックし、再びチャット欄から<strong>IBMについて教えて</strong>と入力し、日本語で回答があることを確認します。<br />
+<a class="glightbox" href="../lab5_AIAssistant_images/image-5.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="alt text" src="../lab5_AIAssistant_images/image-5.png" /></a></p>
+</li>
+<li>
+<p>LLMが一般的な質問に対して回答を行うかどうかは、<strong>Answer behavior</strong> の <strong>General-purpose answering</strong> で設定することが可能です。右側にあるトグルスイッチをクリックし、OFFにしてください。<br />
+<a class="glightbox" href="../lab5_images/image-7.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="alt text" src="../lab5_images/image-7.png" /></a></p>
+</li>
+<li>
+<p>再びプレビューをリスタートし、入力欄に<strong>IBMについて教えて</strong>と入力してください。先ほどとは回答が異なることを確認します。<br />
 <a class="glightbox" href="../lab5_images/image-8.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="alt text" src="../lab5_images/image-8.png" /></a></p>
 </li>
 <li>
-<p><strong>General-purpose answering</strong> をONに戻し、いくつかのLLMを切り替えて、様々な質問をして回答を確認してみてください。  </p>
+<p><strong>General-purpose answering</strong> をONに戻し、いくつかのLLMを切り替えたり、指示を変更したりして、様々な質問に対する回答を確認してみてください。  </p>
 </li>
 </ol>
 <h2 id="ai-guided-action">AI-Guided Actionの作成</h2>
-<p>AI-Guilded Actionは特定のインテントにマッチした場合に、LLMによって回答を生成する機能です。インテントごとに細かく生成AIの振る舞いや前提知識を指定することで、RAGと同様に根拠のある回答を行うことが可能です。</p>
+<p>AI-Guilded Actionは、ユーザーの入力が特定のインテント(意図)にマッチした場合に、LLMによって回答を生成する機能です。インテントごとに細かく生成AIの振る舞いや前提知識を指定することで、RAGと同様に根拠のある回答を行うことが可能です。</p>
 <ol>
 <li>
 <p>左側のメニューより、<strong>Actions</strong>を選択してください。  <br />
-<a class="glightbox" href="../lab5_images/image-10.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="alt text" src="../lab5_images/image-10.png" /></a></p>
+<a class="glightbox" href="../lab5_AIAssistant_images/image-7.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="alt text" src="../lab5_AIAssistant_images/image-7.png" /></a></p>
 </li>
 <li>
 <p><strong>Create action +</strong>をクリックしてください。  <br />
@@ -504,8 +513,8 @@
 <a class="glightbox" href="../lab5_images/image-13.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="alt text" src="../lab5_images/image-13.png" /></a></p>
 </li>
 <li>
-<p>左側の <strong>Configuration</strong> をクリックすると設定画面が表示されます。Select modelから使用するLLMを選択することが可能です。今回は<strong>llama3-8b-instruct</strong>を選択してください。<br />
-<a class="glightbox" href="../lab5_images/image-14.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="alt text" src="../lab5_images/image-14.png" /></a></p>
+<p>左側の <strong>Configuration</strong> をクリックすると設定画面が表示されます。Select modelから使用するLLMを選択することが可能です。今回は<strong>llama3-1-8b-instruct</strong>を選択してください。<br />
+<a class="glightbox" href="../lab5_AIAssistant_images/image-8.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="alt text" src="../lab5_AIAssistant_images/image-8.png" /></a></p>
 </li>
 <li>
 <p><strong>Add knowledge</strong> の欄に以下のテキストをコピー＆ペーストしてください。ここにLLMが動作する際に使用する知識を記入することで、知識に基づいた回答を生成することが可能です。<br />
@@ -538,7 +547,7 @@
 </li>
 </ol>
 <h2 id="skill-based-action">Skill based Actionの作成</h2>
-<p>Skill based actionを用いることで、AI-Assistantからスキルを呼び出すことが可能です。今回はLab4で作成したスキルを呼び出すアクションを定義してみましょう。なお、アプリケーションの接続が必要なスキルは管理者による登録作業が必要です。  </p>
+<p>Skill based actionを用いることで、AI-Assistantからスキルを呼び出すことが可能です。今回はハンズオンで作成した生成AIのスキルを呼び出すアクションを定義してみましょう。なお、アプリケーションの接続(認証)が必要なスキルは管理者による登録作業が必要ですが、生成AIスキルは認証無しに呼び出すことが可能なため、この作業は必要ありません。</p>
 <ol>
 <li>
 <p><strong>New action</strong> をクリックしてください。<br />
@@ -549,26 +558,30 @@
 <a class="glightbox" href="../lab5_images/image-21.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="alt text" src="../lab5_images/image-21.png" /></a></p>
 </li>
 <li>
-<p>スキルの選択画面が表示されるので、Lab4のハンズオンで作成した <strong><em>YourInitials</em>_Personal_Loan</strong> を選択し、右上の <strong>Next</strong> をクリックしてください。 （Lab4のハンズオンを実施していない場合は任意のスキルを選択してください） 
- <a class="glightbox" href="../lab5_images/image-22.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="alt text" src="../lab5_images/image-22.png" /></a></p>
+<p>スキルの選択画面が表示されるので、ハンズオンで作成した <strong><em>YourInitials</em>generateRecommendationMail</strong> を選択し、右上の <strong>Next</strong> をクリックしてください。 （生成AIのハンズオンを実施していない場合は任意のスキルを選択してください） 
+ <a class="glightbox" href="../lab5_AIAssistant_images/image-9.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="alt text" src="../lab5_AIAssistant_images/image-9.png" /></a></p>
 </li>
 <li>
-<p><strong>New action</strong> でスキルを呼び出すためのフレーズとなる <strong>ローンの審査</strong> と入力して <strong>Save</strong> をクリックします。
- <a class="glightbox" href="../lab5_images/image-23.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="alt text" src="../lab5_images/image-23.png" /></a></p>
+<p><strong>New action</strong> でスキルを呼び出すためのフレーズとなる <strong>メールの生成</strong> と入力して <strong>Save</strong> をクリックします。
+<a class="glightbox" href="../lab5_AIAssistant_images/image-10.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="alt text" src="../lab5_AIAssistant_images/image-10.png" /></a></p>
 </li>
 <li>
-<p>さきほど入力した <strong>ローンの審査</strong> がフレーズとして登録されていることが確認できます。なお、ここでスキルを呼び出すためのフレーズは追加することができます。複数のフレーズを指定することで認識の精度が高まります。
- <a class="glightbox" href="../lab5_images/image-24.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="alt text" src="../lab5_images/image-24.png" /></a></p>
+<p>さきほど入力した <strong>メールの生成</strong> がフレーズとして登録されていることが確認できます。なお、ここでスキルを呼び出すためのフレーズは追加することができます。複数のフレーズを指定することで認識の精度が高まります。
+<a class="glightbox" href="../lab5_AIAssistant_images/image-11.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="alt text" src="../lab5_AIAssistant_images/image-11.png" /></a></p>
 </li>
 <li>
 <p>右上のアイコンより変更を保存してください。<br />
 <a class="glightbox" href="../lab5_images/image-17.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="alt text" src="../lab5_images/image-17.png" /></a></p>
 </li>
 <li>
-<p>右下のチャット・プレビューに <strong>ローンの審査</strong> と記入し、送信してください。スキルが呼び出され入力フォームが表示されます。なお、watsonx Orchestrateでは設定でフォーム入力にするか、チャットで1つづつ入力パラメータを確認するかの設定が可能です。
+<p>右下のチャット・プレビューに <strong>メールの生成</strong> と記入し、送信してください。スキルが呼び出され、呼び出しに必要な項目が聞かれます。（今回は生成AI作成時に項目名をカスタマイズしており、それがそのまま表示されていますがカスタマイズ可能です。また、設定を切り替えることで、フォーム入力にするか、チャットで1つづつ入力パラメータを確認するかの変更が可能です。
  <a href="https://www.ibm.com/docs/ja/watsonx/watson-orchestrate/current?topic=actions-defining-how-interact-skill-in-conversation#configuring-multi-turn-conversations" target="_blank" rel="noopener noreferrer">こちら</a>
- をご参照ください。
- <a class="glightbox" href="../lab5_images/image-25.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="alt text" src="../lab5_images/image-25.png" /></a></p>
+ をご参照ください。<br />
+<a class="glightbox" href="../lab5_AIAssistant_images/image-13.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="alt text" src="../lab5_AIAssistant_images/image-13.png" /></a></p>
+</li>
+<li>
+<p>必要な項目を入力し、確認すると、スキルの実行結果が表示されます。今回は作成したスキルをそのまま利用しているため、スキルのパラメータが全て表示されていますが、表示項目の制御や、ここで作成したアクションをサブ・アクションとして他のアクションから呼び出すことで、それまでの会話から取得した項目を自動的に引き渡すことなども可能です。    <br />
+<a class="glightbox" href="../lab5_AIAssistant_images/image-14.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="alt text" src="../lab5_AIAssistant_images/image-14.png" /></a></p>
 </li>
 <li>
 <p>右上の <strong>x</strong> をクリックして、設定画面を閉じてください。<br />
